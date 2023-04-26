@@ -30,28 +30,30 @@ body {
 .container .top {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   padding: 40px;
-  padding-bottom: 0;
+  height: 300px;
+  padding-bottom: 1px;
 }
 
 .container .top .imgBx {
   position: relative;
   width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .container .top .imgBx .box {
   position: relative;
   width: 70%;
-  min-width: 270px;
+  max-width: 250px;
   border-radius: 50%;
   overflow: hidden;
   aspect-ratio: 1;
-  box-shadow: 0 0 8px rgba(0, 0, 0, .3),
-  0 0 12px rgba(0, 0, 0, .6),
-  0 0 16px rgba(0, 0, 0, .9);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3), 0 0 12px rgba(0, 0, 0, 0.6),
+    0 0 16px rgba(0, 0, 0, 0.9);
 }
 
 .container .top .imgBx .box img {
@@ -62,17 +64,24 @@ body {
   height: 100%;
   object-fit: cover;
   box-shadow: 4px 4px 8px black;
+  transition: 0.35s;
+}
+
+.container .top .imgBx .box img:hover {
+  scale: 1.2;
 }
 
 .container .top .profileText {
   position: relative;
+  height: 70%;
   padding: 40px;
+  padding-right: 0;
   display: flex;
   align-items: center;
 }
 
 .container .top .profileText h3 {
-  font-size: 2.5em;
+  font-size: 2em;
   letter-spacing: 0.1em;
   line-height: 1.2em;
   font-weight: 600;
@@ -108,7 +117,7 @@ body {
   grid-row: 1 / span 1;
   background: black;
   color: white;
-  padding: 15px 25px;
+  padding: 15px 30px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -120,21 +129,17 @@ body {
 }
 
 .leftSide .group h2 {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   font-size: 30px;
   letter-spacing: 6px;
   color: whitesmoke;
-  text-shadow: 0 0 4px blue,
-  0 0 8px blueviolet,
-  0 0 16px blueviolet;
+  text-shadow: 0 0 4px blue, 0 0 8px blueviolet, 0 0 16px blueviolet;
 }
 
 .rightSide h2 {
   font-size: 30px;
   letter-spacing: 6px;
-  text-shadow: 0 0 1px orange,
-  0 0 2px orangered,
-  0 0 3px red;
+  text-shadow: 0 0 1px orange, 0 0 2px orangered, 0 0 3px red;
 }
 
 .rightSide .about p {
@@ -152,11 +157,11 @@ body {
   flex-direction: row;
   justify-items: center;
   justify-content: space-between;
-  height: 50px;
+  height: 60px;
   padding-top: 15px;
 }
 
-.container .contentBox .footer h3 {
+.container .contentBox .footer h2 {
   border-left: 4px solid #ff8bb3;
   width: 20%;
   height: 30px;
@@ -192,6 +197,7 @@ body {
   color: #333;
   cursor: pointer;
   pointer-events: none;
+  text-align: center;
 }
 
 .container .contentBox .footer ul li span a {
@@ -212,7 +218,7 @@ body {
 /* .container .contentBox .footer ul li ion-icon .icon-inner {
   padding: 4px;
 } */
-  
+
 .container .contentBox ul.education li {
   display: flex;
   flex-direction: column;
@@ -227,6 +233,7 @@ body {
   padding: 1px 13px;
   pointer-events: auto;
   width: 70%;
+  transition: 0.15s;
 }
 
 .container .contentBox ul.education li a:hover {
@@ -251,13 +258,13 @@ h5 {
 }
 
 h4 {
-  color: #333;
+  color: #666;
   font-weight: 500;
   margin: 0;
 }
 
 h6 {
-  color: #666;
+  color: #999;
   font-weight: 300;
   font-size: 1em;
 }
